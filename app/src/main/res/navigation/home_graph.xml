@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/destination_home">
+
+    <fragment
+        android:id="@+id/destination_home"
+        android:name="com.olayg.navigationsamplewithauthentication.view.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/go_to_destination_another"
+            app:destination="@id/destination_another" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_another"
+        android:name="com.olayg.navigationsamplewithauthentication.view.home.UpdatedToolbarFragment"
+        android:label="@string/updated_toolbar"
+        tools:layout="@layout/fragment_updated_toolbar" />
+</navigation>

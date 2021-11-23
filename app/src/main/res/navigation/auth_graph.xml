@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/destination_login">
+
+    <fragment
+        android:id="@+id/destination_login"
+        android:name="com.olayg.navigationsamplewithauthentication.view.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/go_to_home_graph"
+            app:destination="@id/nav_graph"
+            app:popUpTo="@id/destination_login"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/go_to_destination_register"
+            app:destination="@id/destination_register"
+            app:popUpTo="@id/destination_login"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_register"
+        android:name="com.olayg.navigationsamplewithauthentication.view.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/go_to_home_graph"
+            app:destination="@id/nav_graph"
+            app:popUpTo="@id/destination_register"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/go_to_destination_login"
+            app:destination="@id/destination_login"
+            app:popUpTo="@id/destination_register"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph" />
+
+</navigation>
