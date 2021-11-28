@@ -39,7 +39,6 @@ class LoginFragment : Fragment() {
     private fun initViews() = with(binding) {
         btnLogin.setOnClickListener {
             viewModel.login("username", "password")
-            findNavController().navigate(LoginFragmentDirections.goToHomeGraph())
         }
         tvRegister.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.goToDestinationRegister())

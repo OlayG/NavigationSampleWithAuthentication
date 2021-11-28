@@ -66,7 +66,10 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_logout -> logout()
+            R.id.action_logout -> {
+                mainViewModel.logout()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -118,12 +121,5 @@ class MainActivity : AppCompatActivity() {
         menu?.findItem(R.id.action_logout)?.isVisible = !hide
         fab.isVisible = !hide
         bottomNavigation.isVisible = !hide
-    }
-
-    private fun logout(): Boolean {
-        mainViewModel.logout()
-        val navOptions = NavOptions.Builder().setPopUpTo(R.id.destination_login, true).build()
-        navHostFragment.navController.navigate(R.id.destination_login, null, navOptions)
-        return true
     }
 }

@@ -39,7 +39,6 @@ class RegisterFragment : Fragment() {
     private fun initViews() = with(binding) {
         btnRegister.setOnClickListener {
             viewModel.register(email = "email", username = "username", password = "password")
-            findNavController().navigate(RegisterFragmentDirections.goToHomeGraph())
         }
         tvAlreadyHaveAnAccount.setOnClickListener {
             findNavController().navigate(RegisterFragmentDirections.goToDestinationLogin())
