@@ -7,6 +7,11 @@
         android:title="@string/home" />
 
     <item
+        android:id="@id/browse_graph"
+        android:icon="@drawable/ic_home"
+        android:title="@string/browse" />
+
+    <item
         android:id="@id/settings_graph"
         android:icon="@drawable/ic_settings"
         android:title="@string/settings" />

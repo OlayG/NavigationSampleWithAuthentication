@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
                             R.id.destination_login,
                             R.id.destination_register,
                             R.id.destination_home,
+                            R.id.destination_browse,
                             R.id.destination_settings
                         )
                     )
